@@ -31,7 +31,8 @@ def getstats():
   }
   return stats
 
-def main():
+
+def post():
   data = getstats()
   payload = {"status":  data['timestamp'] + "\n" + str(data['feeds']) + \
   " подкаста са публикували " + str(data['totalep']) + " епизода на български език.\n" + \
@@ -44,5 +45,5 @@ def main():
   return response.status_code
 
 if __name__ == '__main__':
-	main()
+	post()
 
